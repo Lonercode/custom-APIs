@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction} from 'express';
-import axios, {AxiosResponse} from 'axios';
 import db from '../services/db';
 
 interface Post{
