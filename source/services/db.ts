@@ -1,12 +1,16 @@
-import mysql from 'mysql';
-import 'dotenv/config';
-const conn = mysql.createConnection({
-    host: process.env.HOST,
+import * as mysql from 'mysql2';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const conn = mysql.createPool({
+    host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_database
+    database: process.env.DB_DATABASE,
+    
 });
 
-conn.connect();
+
+
 
 export = conn;

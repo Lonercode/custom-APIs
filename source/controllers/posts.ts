@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction} from 'express';
 import db from '../services/db';
+import { Request, Response, NextFunction} from 'express';
 
 interface Post{
     id: Number;
